@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmywq8q6i5twq"]
+
+[ext_resource type="PackedScene" uid="uid://cxrn5rt7d8l8l" path="res://Scenes/Player.tscn" id="1_850tu"]
+[ext_resource type="Texture2D" uid="uid://bkbxiqh7vlbxe" path="res://Sprites/Coin.png" id="2_0vv3m"]
+
+[node name="Main" type="Node2D"]
+position = Vector2(414, 275)
+
+[node name="Coins" type="Sprite2D" parent="."]
+position = Vector2(314.882, -40)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_0vv3m")
+
+[node name="Coins2" type="Sprite2D" parent="."]
+position = Vector2(314.882, 40)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_0vv3m")
+
+[node name="Coins3" type="Sprite2D" parent="."]
+position = Vector2(347.882, 0)
+texture = ExtResource("2_0vv3m")
+
+[node name="Coins5" type="Sprite2D" parent="."]
+position = Vector2(403.882, 1.52588e-05)
+rotation = 0.785398
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_0vv3m")
+
+[node name="Coins6" type="Sprite2D" parent="."]
+position = Vector2(235.882, 1.52588e-05)
+rotation = 0.785398
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_0vv3m")
+
+[node name="Coins4" type="Sprite2D" parent="."]
+position = Vector2(283.882, 0)
+texture = ExtResource("2_0vv3m")
+
+[node name="2DPlayerController" parent="." instance=ExtResource("1_850tu")]
