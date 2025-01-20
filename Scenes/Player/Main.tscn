@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dmywq8q6i5twq"]
 
-[ext_resource type="PackedScene" uid="uid://cxrn5rt7d8l8l" path="res://Scenes/Player.tscn" id="1_850tu"]
+[ext_resource type="PackedScene" uid="uid://cxrn5rt7d8l8l" path="res://Scenes/Player/Player.tscn" id="1_850tu"]
 [ext_resource type="Texture2D" uid="uid://bkbxiqh7vlbxe" path="res://Sprites/Coin.png" id="2_0vv3m"]
 
 [node name="Main" type="Node2D"]
@@ -37,3 +37,4 @@ position = Vector2(283.882, 0)
 texture = ExtResource("2_0vv3m")
 
 [node name="2DPlayerController" parent="." instance=ExtResource("1_850tu")]
+script = null

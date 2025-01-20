@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=3 uid="uid://cxrn5rt7d8l8l"]
 
 [ext_resource type="SpriteFrames" uid="uid://da27cdtcbivl2" path="res://Anim/CarpSpritesheet.tres" id="1_uwad6"]
-[ext_resource type="Script" path="res://Scenes/animation_player.gd" id="2_3l03u"]
+[ext_resource type="Script" path="res://Scenes/Player/animation_player.gd" id="2_3l03u"]
 [ext_resource type="FontFile" uid="uid://bci1fhsepxld0" path="res://Fonts/Pixeboy-z8XGD.ttf" id="2_512tm"]
-[ext_resource type="Script" path="res://Scenes/player.gd" id="2_ikafd"]
+[ext_resource type="Script" path="res://Scenes/Player/player.gd" id="2_ikafd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7h7bd"]
 size = Vector2(23.0313, 29.5625)
@@ -28,9 +28,6 @@ _data = {
 "RESET": SubResource("Animation_5tfxc")
 }
 
-[sub_resource type="Animation" id="Animation_eyyku"]
-resource_name = "CarpIdleRight"
-
 [sub_resource type="Animation" id="Animation_py6wf"]
 resource_name = "CarpIdleLeft"
 length = 4.0
@@ -46,6 +43,9 @@ tracks/0/keys = {
 "update": 1,
 "values": [0, 0, 0, 0]
 }
+
+[sub_resource type="Animation" id="Animation_eyyku"]
+resource_name = "CarpIdleRight"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a8m31"]
 _data = {
