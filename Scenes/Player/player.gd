@@ -8,7 +8,6 @@ func _ready() -> void:
 
 func _physics_process(_delta):
 #Reset Velocity
-	print ("Velocity:", velocity)
 	velocity = Vector2.ZERO
 #Character Movement
 	if Input.is_action_pressed("ui_left"):
