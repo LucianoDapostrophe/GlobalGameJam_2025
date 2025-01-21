@@ -36,5 +36,4 @@ texture = ExtResource("1_o60b6")
 position = Vector2(283.882, 0)
 texture = ExtResource("1_o60b6")
 
-[node name="2DPlayerController" parent="." instance=ExtResource("2_vh1mo")]
-script = null
+[node name="2DPlayer" parent="." instance=ExtResource("2_vh1mo")]

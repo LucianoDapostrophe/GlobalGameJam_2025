@@ -11,8 +11,9 @@ size = Vector2(23.0313, 29.5625)
 font = ExtResource("2_512tm")
 font_size = 15
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="2DPlayer" type="CharacterBody2D"]
 motion_mode = 1
+platform_on_leave = 2
 script = ExtResource("2_ikafd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
