@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://byu0aaepwyhnw"]
 
 [ext_resource type="FontFile" uid="uid://c2ytr1nkvsied" path="res://Fonts/PixeloidSansBold-PKnYd.ttf" id="1_e2e5d"]
-[ext_resource type="Script" path="res://Scenes/textbox.gd" id="1_f6jtw"]
+[ext_resource type="Script" path="res://Scenes/Textbox/textbox.gd" id="1_f6jtw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_67yvt"]
 bg_color = Color(0, 0, 0, 1)
