@@ -6,32 +6,6 @@ var speed = 200
 func _ready() -> void:
 	$CarpSpriteFrames.play("CarpIdleRight")  # Start with the "CarpIdleRight" animation
 
-func _process(_delta):
-# ===ANIMATIONS===
-# Carp faces the direction that is pressed
-	if Input.is_action_pressed("ui_right"):
-		$CarpSpriteFrames.play("CarpWalkRight")
-
-	if Input.is_action_pressed("ui_left"):
-		$CarpSpriteFrames.play("CarpWalkLeft")
-
-	if Input.is_action_pressed("ui_up"):
-		$CarpSpriteFrames.play("CarpWalkUp")
-
-	if Input.is_action_pressed("ui_down"):
-		$CarpSpriteFrames.play("CarpWalkDown")
-
-# Line up idle animations with direction that was just released
-	if Input.is_action_just_released("ui_right"):
-		$CarpSpriteFrames.play("CarpIdleRight")
-	if Input.is_action_just_released("ui_left"):
-		$CarpSpriteFrames.play("CarpIdleLeft")
-	if Input.is_action_just_released("ui_up"):
-		$CarpSpriteFrames.play("CarpIdleUp")
-	if Input.is_action_just_released("ui_down"):
-		$CarpSpriteFrames.play("CarpIdleDown")
-# ===DIRECTIONAL INPUT===
-
 func _physics_process(_delta):
 #Reset Velocity
 	print ("Velocity:", velocity)
@@ -50,5 +24,31 @@ func _physics_process(_delta):
 		# Normalize velocity to maintain consistent speed when moving diagonally
 	if velocity != Vector2.ZERO:
 		velocity = velocity.normalized() * speed
-		
+	 # Apply movement
 	move_and_slide()
+	# Update animations
+	update_animation()
+
+func update_animation():
+# Line up idle animations with direction that was just released
+	if Input.is_action_just_released("ui_right"):
+		$CarpSpriteFrames.play("CarpIdleRight")
+	if Input.is_action_just_released("ui_left"):
+		$CarpSpriteFrames.play("CarpIdleLeft")
+	if Input.is_action_just_released("ui_up"):
+		$CarpSpriteFrames.play("CarpIdleUp")
+	if Input.is_action_just_released("ui_down"):
+		$CarpSpriteFrames.play("CarpIdleDown")
+	# Determine direction based on velocity
+	if abs(velocity.x) > abs(velocity.y):  # Horizontal movement
+		if velocity.x > 0:
+			$CarpSpriteFrames.play("CarpWalkRight")
+			$CarpSpriteFrames.flip_h = false #ensure sprite faces right
+		elif velocity.x < 0:
+			$CarpSpriteFrames.play("CarpWalkLeft")
+			
+	else: #Vertical Movement
+		if velocity.y > 0:
+			$CarpSpriteFrames.play("CarpWalkDown")
+		elif velocity.y < 0:
+			$CarpSpriteFrames.play("CarpWalkUp")
