@@ -1,0 +1,120 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxuasv6m7x50j"]
+
+[ext_resource type="FontFile" uid="uid://c2ytr1nkvsied" path="res://Fonts/PixeloidSansBold-PKnYd.ttf" id="1_jeh61"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yfmtb"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xc2my"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -245.0
+offset_right = 568.0
+grow_vertical = 0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = -8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yfmtb")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="MarginContainer/MarginContainer"]
+visible = false
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xc2my")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("1_jeh61")
+theme_override_font_sizes/font_size = 36
+action_mode = 0
+button_mask = 0
+text = "Wait"
+
+[node name="Button2" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_jeh61")
+theme_override_font_sizes/font_size = 36
+action_mode = 0
+button_mask = 0
+text = "Kneel"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button3" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_jeh61")
+theme_override_font_sizes/font_size = 36
+action_mode = 0
+button_mask = 0
+text = "Pspspsps"
+
+[node name="Button4" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_jeh61")
+theme_override_font_sizes/font_size = 36
+action_mode = 0
+button_mask = 0
+text = "Extend Hand"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button5" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_jeh61")
+theme_override_font_sizes/font_size = 36
+action_mode = 0
+button_mask = 0
+text = "Laser"
+
+[node name="Button6" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_jeh61")
+theme_override_font_sizes/font_size = 36
+action_mode = 0
+button_mask = 0
+text = "Give"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button7" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_jeh61")
+theme_override_font_sizes/font_size = 36
+action_mode = 0
+button_mask = 0
+text = "Pet
+"

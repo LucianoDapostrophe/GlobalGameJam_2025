@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://dhykwbdfyutj5"]
+[gd_scene load_steps=3 format=3 uid="uid://dhykwbdfyutj5"]
+
+[ext_resource type="PackedScene" uid="uid://byu0aaepwyhnw" path="res://Scenes/Textbox/textbox.tscn" id="1_aw4ow"]
+[ext_resource type="PackedScene" uid="uid://cxuasv6m7x50j" path="res://Scenes/VerticalMenu/verticalmenu.tscn" id="2_s1eqk"]
 
 [node name="Battle" type="Node2D"]
 
@@ -6,3 +9,7 @@
 z_index = -100
 offset_right = 1152.0
 offset_bottom = 648.0
+
+[node name="Textbox" parent="." instance=ExtResource("1_aw4ow")]
+
+[node name="CanvasLayer" parent="." instance=ExtResource("2_s1eqk")]
