@@ -1,6 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cxuasv6m7x50j"]
-
-[ext_resource type="FontFile" uid="uid://c2ytr1nkvsied" path="res://Fonts/PixeloidSansBold-PKnYd.ttf" id="1_jeh61"]
+[gd_scene load_steps=3 format=3 uid="uid://cxuasv6m7x50j"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yfmtb"]
 bg_color = Color(0, 0, 0, 1)
@@ -42,79 +40,92 @@ visible = false
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_xc2my")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer"]
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/MarginContainer"]
 layout_mode = 2
+columns = 4
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/GridContainer"]
 layout_mode = 2
-size_flags_vertical = 3
+text = ">"
 
-[node name="Button" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Button" type="Button" parent="MarginContainer/MarginContainer/GridContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
-theme_override_fonts/font = ExtResource("1_jeh61")
-theme_override_font_sizes/font_size = 36
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 action_mode = 0
 button_mask = 0
-text = "Wait"
+text = "Wait
+"
+alignment = 0
 
-[node name="Button2" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Label2" type="Label" parent="MarginContainer/MarginContainer/GridContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_jeh61")
-theme_override_font_sizes/font_size = 36
+text = ">"
+
+[node name="Button2" type="Button" parent="MarginContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 action_mode = 0
 button_mask = 0
-text = "Kneel"
+text = "Kneel
+"
+alignment = 0
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
+[node name="Label3" type="Label" parent="MarginContainer/MarginContainer/GridContainer"]
 layout_mode = 2
-size_flags_vertical = 3
+text = ">"
 
-[node name="Button3" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Button3" type="Button" parent="MarginContainer/MarginContainer/GridContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_jeh61")
-theme_override_font_sizes/font_size = 36
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 action_mode = 0
 button_mask = 0
 text = "Pspspsps"
+alignment = 0
 
-[node name="Button4" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Label4" type="Label" parent="MarginContainer/MarginContainer/GridContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_jeh61")
-theme_override_font_sizes/font_size = 36
+text = ">"
+
+[node name="Button4" type="Button" parent="MarginContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 action_mode = 0
 button_mask = 0
 text = "Extend Hand"
+alignment = 0
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
+[node name="Label5" type="Label" parent="MarginContainer/MarginContainer/GridContainer"]
 layout_mode = 2
-size_flags_vertical = 3
+text = ">"
 
-[node name="Button5" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer3"]
+[node name="Button5" type="Button" parent="MarginContainer/MarginContainer/GridContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_jeh61")
-theme_override_font_sizes/font_size = 36
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 action_mode = 0
 button_mask = 0
 text = "Laser"
+alignment = 0
 
-[node name="Button6" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer3"]
+[node name="Label6" type="Label" parent="MarginContainer/MarginContainer/GridContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_jeh61")
-theme_override_font_sizes/font_size = 36
+text = ">"
+
+[node name="Button6" type="Button" parent="MarginContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 action_mode = 0
 button_mask = 0
 text = "Give"
+alignment = 0
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
+[node name="Label7" type="Label" parent="MarginContainer/MarginContainer/GridContainer"]
 layout_mode = 2
-size_flags_vertical = 3
+text = ">"
 
-[node name="Button7" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer4"]
+[node name="Button7" type="Button" parent="MarginContainer/MarginContainer/GridContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_jeh61")
-theme_override_font_sizes/font_size = 36
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 action_mode = 0
 button_mask = 0
-text = "Pet
-"
+text = "Pet"
+alignment = 0
