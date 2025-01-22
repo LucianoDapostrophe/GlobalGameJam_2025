@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://cn47tijmew465"]
+
+[ext_resource type="Texture2D" uid="uid://chfsnb72ymxj7" path="res://Sprites/loot.png" id="1_0anye"]
+[ext_resource type="Script" path="res://Scenes/chest.gd" id="2_36pw4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2r021"]
+size = Vector2(33, 25.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o2jmo"]
+size = Vector2(28, 20)
+
+[node name="Chest" type="Sprite2D"]
+z_as_relative = false
+y_sort_enabled = true
+texture = ExtResource("1_0anye")
+script = ExtResource("2_36pw4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+z_index = -100
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -11.75)
+shape = SubResource("RectangleShape2D_2r021")
+
+[node name="InteractionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_o2jmo")
+debug_color = Color(0.823706, 0.289062, 0.698392, 0.42)
+
+[connection signal="area_entered" from="InteractionArea" to="." method="_on_interaction_area_area_entered"]
+[connection signal="area_exited" from="InteractionArea" to="." method="_on_interaction_area_area_exited"]
