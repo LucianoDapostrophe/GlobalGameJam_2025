@@ -1,7 +1,6 @@
 extends CanvasLayer
 
 const READ_RATE = 0.05
-var tween
 
 @onready var textbox_container = $TextboxContainer
 @onready var start_symbol = $TextboxContainer/MarginContainer/HBoxContainer/Start
@@ -14,6 +13,7 @@ enum State {
 	FINISHED
 }
 
+var tween
 var current_state = State.READY
 var text_queue = []
 
@@ -30,6 +30,8 @@ func _process(_delta):
 		State.READY:
 			if !text_queue.is_empty():
 				display_text()
+			else:
+				hide_textbox()
 		State.READING:
 			if Input.is_action_just_pressed("ui_accept"):
 				tween.kill()
@@ -38,15 +40,18 @@ func _process(_delta):
 		State.FINISHED:
 			if Input.is_action_just_pressed("ui_accept"):
 				change_state(State.READY)
-				hide_textbox()
+				clear_textbox()
 
 func queue_text(next_text):
 	text_queue.push_back(next_text)
 
-func hide_textbox():
+func clear_textbox():
 	start_symbol.text = ""
 	end_symbol.text = ""
 	msg_text.text = ""
+
+func hide_textbox():
+	clear_textbox()
 	textbox_container.hide()
 	
 func show_textbox():
