@@ -37,11 +37,18 @@ func _physics_process(_delta):
 	update_animation()
 #Check for interaction input
 	if Input.is_action_just_pressed("ui_accept") and nearby_object:
-		nearby_object.interact()
+		if nearby_object.has_method("interact"):
+			nearby_object.interact()
+			print("Interaction event triggered")
+		else:
+			print("No interactable found")
 
 func _on_InteractionArea_body_entered(body):
 	if body.is_in_group("interactables"):  # Ensure the object is interactable
 		nearby_object = body  # Store the reference to the interactable object
+
+func _interact():
+	pass
 
 func _on_InteractionArea_body_exited(body):
 	if body == nearby_object:

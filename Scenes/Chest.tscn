@@ -10,10 +10,9 @@ size = Vector2(33, 25.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o2jmo"]
 size = Vector2(28, 20)
 
-[node name="Area2D" type="Area2D" groups=["interactables"]]
+[node name="StaticBody2D" type="StaticBody2D"]
 collision_layer = 3
 collision_mask = 3
-collision_priority = 2.0
 script = ExtResource("2_36pw4")
 default_texture = ExtResource("1_0anye")
 interacted_texture = ExtResource("3_qwq36")
@@ -21,20 +20,16 @@ interacted_texture = ExtResource("3_qwq36")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_as_relative = false
 y_sort_enabled = true
-texture = ExtResource("1_0anye")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -11.75)
 shape = SubResource("RectangleShape2D_2r021")
 
-[node name="InteractionArea" type="Area2D" parent="."]
+[node name="InteractionArea" type="Area2D" parent="." groups=["interactables"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_o2jmo")
 debug_color = Color(0.823706, 0.289062, 0.698392, 0.42)
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
-[connection signal="area_exited" from="." to="." method="_on_area_exited"]
-[connection signal="area_entered" from="InteractionArea" to="Sprite2D" method="_on_interaction_area_area_entered"]
-[connection signal="area_exited" from="InteractionArea" to="Sprite2D" method="_on_interaction_area_area_exited"]
+[connection signal="area_entered" from="InteractionArea" to="." method="_on_interaction_area_area_entered"]
