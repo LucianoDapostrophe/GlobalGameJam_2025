@@ -22,7 +22,8 @@ shape = SubResource("RectangleShape2D_7h7bd")
 [node name="CarpSpriteFrames" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -15)
 sprite_frames = ExtResource("1_uwad6")
-animation = &"CarpIdleRight"
+animation = &"CarpWalkRight"
+frame_progress = 0.887621
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)

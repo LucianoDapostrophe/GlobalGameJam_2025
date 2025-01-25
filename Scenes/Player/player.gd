@@ -13,7 +13,6 @@ func _ready() -> void:
 func _process(_delta:float) -> void:
 	pass
 
-
 func _physics_process(_delta):
 #Reset Velocity
 	velocity = Vector2.ZERO
@@ -37,11 +36,8 @@ func _physics_process(_delta):
 	update_animation()
 #Check for interaction input
 	if Input.is_action_just_pressed("ui_accept") and nearby_object:
-		if nearby_object.has_method("interact"):
-			nearby_object.interact()
-			print("Interaction event triggered")
-		else:
-			print("No interactable found")
+		nearby_object.interact()
+	
 
 func _on_InteractionArea_body_entered(body):
 	if body.is_in_group("interactables"):  # Ensure the object is interactable

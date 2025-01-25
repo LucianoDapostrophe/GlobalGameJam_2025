@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cn47tijmew465"]
+[gd_scene load_steps=8 format=3 uid="uid://cn47tijmew465"]
 
 [ext_resource type="Texture2D" uid="uid://chfsnb72ymxj7" path="res://Sprites/loot.png" id="1_0anye"]
 [ext_resource type="Script" path="res://Scenes/chest.gd" id="2_36pw4"]
 [ext_resource type="Texture2D" uid="uid://uc4f147q7hvi" path="res://Sprites/lootOpen.png" id="3_qwq36"]
+[ext_resource type="Script" path="res://interactable.gd" id="4_1w6kw"]
+[ext_resource type="AudioStream" uid="uid://b4npvsesqhuwg" path="res://SFX/smb3_coin.wav" id="5_f00yl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2r021"]
 size = Vector2(33, 25.5)
@@ -10,26 +12,30 @@ size = Vector2(33, 25.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o2jmo"]
 size = Vector2(28, 20)
 
-[node name="StaticBody2D" type="StaticBody2D"]
+[node name="StaticBody2D" type="StaticBody2D" groups=["interactables"]]
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("2_36pw4")
-default_texture = ExtResource("1_0anye")
-interacted_texture = ExtResource("3_qwq36")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-z_as_relative = false
-y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -11.75)
 shape = SubResource("RectangleShape2D_2r021")
 
 [node name="InteractionArea" type="Area2D" parent="." groups=["interactables"]]
+script = ExtResource("4_1w6kw")
+default_texture = ExtResource("1_0anye")
+interacted_texture = ExtResource("3_qwq36")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_o2jmo")
 debug_color = Color(0.823706, 0.289062, 0.698392, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="InteractionArea"]
+z_as_relative = false
+y_sort_enabled = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="InteractionArea"]
+stream = ExtResource("5_f00yl")
 
 [connection signal="area_entered" from="InteractionArea" to="." method="_on_interaction_area_area_entered"]
