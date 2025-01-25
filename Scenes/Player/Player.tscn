@@ -15,8 +15,7 @@ font_size = 15
 show_behind_parent = true
 z_index = 10
 z_as_relative = false
-collision_layer = 255
-collision_mask = 255
+collision_mask = 2
 motion_mode = 1
 platform_on_leave = 2
 script = ExtResource("2_ikafd")
@@ -43,9 +42,11 @@ animation = &"CarpIdleRight"
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 
-[node name="InteractionArea" type="Area2D" parent="."]
+[node name="PlayerInteractionRange" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerInteractionRange"]
 position = Vector2(0.742175, -8.60938)
 shape = SubResource("RectangleShape2D_7h7bd")
 debug_color = Color(0.823529, 0.290196, 0.698039, 0.419608)

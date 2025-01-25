@@ -7,8 +7,8 @@ var speed = 200
 func _ready() -> void:
 	$CarpSpriteFrames.play("CarpIdleRight")  # Start with the "CarpIdleRight" animation
 #Connect signals for object interactions
-	$InteractionArea.connect("area_entered", Callable(self, "_on_InteractionArea_body_entered"))
-	$InteractionArea.connect("area_exited", Callable(self, "_on_InteractionArea_body_entered"))
+	$PlayerInteractionRange.connect("area_entered", Callable(self, "_on_InteractionArea_body_entered"))
+	$PlayerInteractionRange.connect("area_exited", Callable(self, "_on_InteractionArea_body_entered"))
 	
 func _process(_delta:float) -> void:
 	pass
@@ -28,23 +28,25 @@ func _physics_process(_delta):
 		velocity.y -= 1
 	else:
 		velocity.x = 0
-		# Normalize velocity to maintain consistent speed when moving diagonally
+# Normalize velocity to maintain consistent speed when moving diagonally
 	if velocity != Vector2.ZERO:
 		velocity = velocity.normalized() * speed
-	 # Apply movement
+# Apply movement
 	move_and_slide()
-	# Update animations
+# Update animations
 	update_animation()
 #Check for interaction input
 	if Input.is_action_just_pressed("ui_accept") and nearby_object:
 		nearby_object.interact()
+
 func _on_InteractionArea_body_entered(body):
 	if body.is_in_group("interactables"):  # Ensure the object is interactable
 		nearby_object = body  # Store the reference to the interactable object
+
 func _on_InteractionArea_body_exited(body):
 	if body == nearby_object:
 		nearby_object = null  # Clear the reference when leaving the interaction area
-		
+	
 func update_animation():
 # Line up idle animations with direction that was just released
 	if Input.is_action_just_released("ui_right"):
