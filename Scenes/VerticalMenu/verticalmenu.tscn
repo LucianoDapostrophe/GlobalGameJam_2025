@@ -17,7 +17,7 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_top = -245.0
-offset_right = 568.0
+offset_right = 536.0
 grow_vertical = 0
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = -8
@@ -42,90 +42,4 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_xc2my")
 
 [node name="GridContainer" type="GridContainer" parent="MarginContainer/MarginContainer"]
 layout_mode = 2
-columns = 4
-
-[node name="Label" type="Label" parent="MarginContainer/MarginContainer/GridContainer"]
-layout_mode = 2
-text = ">"
-
-[node name="Button" type="Button" parent="MarginContainer/MarginContainer/GridContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-action_mode = 0
-button_mask = 0
-text = "Wait
-"
-alignment = 0
-
-[node name="Label2" type="Label" parent="MarginContainer/MarginContainer/GridContainer"]
-layout_mode = 2
-text = ">"
-
-[node name="Button2" type="Button" parent="MarginContainer/MarginContainer/GridContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-action_mode = 0
-button_mask = 0
-text = "Kneel
-"
-alignment = 0
-
-[node name="Label3" type="Label" parent="MarginContainer/MarginContainer/GridContainer"]
-layout_mode = 2
-text = ">"
-
-[node name="Button3" type="Button" parent="MarginContainer/MarginContainer/GridContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-action_mode = 0
-button_mask = 0
-text = "Pspspsps"
-alignment = 0
-
-[node name="Label4" type="Label" parent="MarginContainer/MarginContainer/GridContainer"]
-layout_mode = 2
-text = ">"
-
-[node name="Button4" type="Button" parent="MarginContainer/MarginContainer/GridContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-action_mode = 0
-button_mask = 0
-text = "Extend Hand"
-alignment = 0
-
-[node name="Label5" type="Label" parent="MarginContainer/MarginContainer/GridContainer"]
-layout_mode = 2
-text = ">"
-
-[node name="Button5" type="Button" parent="MarginContainer/MarginContainer/GridContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-action_mode = 0
-button_mask = 0
-text = "Laser"
-alignment = 0
-
-[node name="Label6" type="Label" parent="MarginContainer/MarginContainer/GridContainer"]
-layout_mode = 2
-text = ">"
-
-[node name="Button6" type="Button" parent="MarginContainer/MarginContainer/GridContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-action_mode = 0
-button_mask = 0
-text = "Give"
-alignment = 0
-
-[node name="Label7" type="Label" parent="MarginContainer/MarginContainer/GridContainer"]
-layout_mode = 2
-text = ">"
-
-[node name="Button7" type="Button" parent="MarginContainer/MarginContainer/GridContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-action_mode = 0
-button_mask = 0
-text = "Pet"
-alignment = 0
+columns = 2
