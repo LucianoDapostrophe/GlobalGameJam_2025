@@ -15,9 +15,6 @@ run/main_scene="res://Scenes/Main.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
 
-[global_group]
-
-interactables=""
 [display]
 
 window/stretch/mode="canvas_items"
@@ -25,6 +22,10 @@ window/stretch/mode="canvas_items"
 [dotnet]
 
 project/assembly_name="GGJ25"
+
+[global_group]
+
+interactables=""
 
 [rendering]
 
