@@ -2,14 +2,12 @@ extends TextureRect
 
 @export var menu_parent_path : NodePath
 @export var cursor_offset : Vector2
-
 @onready var menu_parent := get_node(menu_parent_path)
 
 var cursor_index : int = 0
 
 func _process(_delta):
 	var input := Vector2.ZERO
-	
 	if Input.is_action_just_pressed("ui_up"):
 		input.y -= 1
 	if Input.is_action_just_pressed("ui_down"):
@@ -35,8 +33,7 @@ func _process(_delta):
 
 func get_menu_item_at_index(index : int) -> Control:
 	if menu_parent == null:
-		return null
-		
+		return null		
 	if index >= menu_parent.get_child_count() or index < 0:
 		return null
 		
@@ -49,5 +46,5 @@ func set_cursor_from_index(index : int) -> void:
 	var item_position = menu_item.global_position
 	var item_size = menu_item.size
 	
-	self.global_position = Vector2(item_position.x, item_position.y + item_size.y / 2.0) - (self.size / 2.0) - cursor_offset
+	self.global_position = Vector2(item_position.x, item_position.y) - cursor_offset
 	cursor_index = index
