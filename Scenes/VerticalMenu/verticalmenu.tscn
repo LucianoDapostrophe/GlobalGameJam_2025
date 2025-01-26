@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cxuasv6m7x50j"]
+[gd_scene load_steps=6 format=3 uid="uid://cxuasv6m7x50j"]
 
 [ext_resource type="FontFile" uid="uid://c2ytr1nkvsied" path="res://Fonts/PixeloidSansBold-PKnYd.ttf" id="1_h2ars"]
+[ext_resource type="PackedScene" uid="uid://boc26vgvrx2n1" path="res://Scenes/MenuCursor/menu_cursor.tscn" id="2_fxye6"]
+[ext_resource type="Script" path="res://Scenes/MenuCursor/menu_item.gd" id="2_pk5l0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yfmtb"]
 bg_color = Color(0, 0, 0, 1)
@@ -52,6 +54,7 @@ size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("1_h2ars")
 theme_override_font_sizes/font_size = 36
 text = "Wait"
+script = ExtResource("2_pk5l0")
 
 [node name="Label2" type="Label" parent="MarginContainer/MarginContainer/GridContainer"]
 layout_mode = 2
@@ -59,6 +62,7 @@ size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("1_h2ars")
 theme_override_font_sizes/font_size = 36
 text = "Kneel"
+script = ExtResource("2_pk5l0")
 
 [node name="Label3" type="Label" parent="MarginContainer/MarginContainer/GridContainer"]
 layout_mode = 2
@@ -66,6 +70,7 @@ size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("1_h2ars")
 theme_override_font_sizes/font_size = 36
 text = "Pspspsps"
+script = ExtResource("2_pk5l0")
 
 [node name="Label4" type="Label" parent="MarginContainer/MarginContainer/GridContainer"]
 layout_mode = 2
@@ -73,6 +78,7 @@ size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("1_h2ars")
 theme_override_font_sizes/font_size = 36
 text = "Extend Hand"
+script = ExtResource("2_pk5l0")
 
 [node name="Label5" type="Label" parent="MarginContainer/MarginContainer/GridContainer"]
 layout_mode = 2
@@ -80,6 +86,7 @@ size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("1_h2ars")
 theme_override_font_sizes/font_size = 36
 text = "Laser"
+script = ExtResource("2_pk5l0")
 
 [node name="Label6" type="Label" parent="MarginContainer/MarginContainer/GridContainer"]
 layout_mode = 2
@@ -87,6 +94,7 @@ size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("1_h2ars")
 theme_override_font_sizes/font_size = 36
 text = "Give"
+script = ExtResource("2_pk5l0")
 
 [node name="Label7" type="Label" parent="MarginContainer/MarginContainer/GridContainer"]
 layout_mode = 2
@@ -94,3 +102,12 @@ size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("1_h2ars")
 theme_override_font_sizes/font_size = 36
 text = "Pet"
+script = ExtResource("2_pk5l0")
+
+[node name="MenuCursor" parent="." instance=ExtResource("2_fxye6")]
+z_index = 100
+offset_left = 28.0
+offset_top = 405.0
+offset_right = 622.0
+offset_bottom = 630.0
+menu_parent_path = NodePath("../MarginContainer/MarginContainer/GridContainer")

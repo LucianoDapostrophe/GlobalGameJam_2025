@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://boc26vgvrx2n1"]
+
+[ext_resource type="Texture2D" uid="uid://hhhjbtd5ygpc" path="res://Sprites/Hand_Cursor.png" id="1_bcgnt"]
+[ext_resource type="Script" path="res://Scenes/MenuCursor/menu_cursor.gd" id="2_5j4ij"]
+
+[node name="MenuCursor" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_bcgnt")
+stretch_mode = 4
+script = ExtResource("2_5j4ij")
