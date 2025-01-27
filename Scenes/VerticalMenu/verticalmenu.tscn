@@ -14,7 +14,7 @@ border_color = Color(1, 1, 1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xc2my"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="VerticalMenu" type="CanvasLayer"]
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 2
