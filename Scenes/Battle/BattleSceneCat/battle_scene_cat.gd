@@ -4,7 +4,7 @@ const MAX_HUNGER = 100
 var hunger : int
 var aversion : int
 var hyperactivity : float
-var name
+var cat_name
 
 func _ready() -> void:
 	pass
